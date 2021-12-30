@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (hasWon()) {
                     tv1.setText(turn + " Won! Tap anywhere to replay!");
+                    startOver();
                 }
                 currentTurn();
             }
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (hasWon()) {
                     tv1.setText(turn + " Won! Tap anywhere to replay!");
+                    startOver();
                 }
                 currentTurn();
             }
@@ -83,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (hasWon()) {
                     tv1.setText(turn + " Won! Tap anywhere to replay!");
+                    startOver();
                 }
                 currentTurn();
             }
@@ -103,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (hasWon()) {
                     tv1.setText(turn + " Won! Tap anywhere to replay!");
+                    startOver();
                 }
                 currentTurn();
             }
@@ -123,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (hasWon()) {
                     tv1.setText(turn + " Won! Tap anywhere to replay!");
+                    startOver();
                 }
                 currentTurn();
             }
@@ -143,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (hasWon()) {
                     tv1.setText(turn + " Won! Tap anywhere to replay!");
+                    startOver();
                 }
                 currentTurn();
             }
@@ -163,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (hasWon()) {
                     tv1.setText(turn + " Won! Tap anywhere to replay!");
+                    startOver();
                 }
                 currentTurn();
             }
@@ -183,6 +190,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (hasWon()) {
                     tv1.setText(turn + " Won! Tap anywhere to replay!");
+                    startOver();
                 }
                 currentTurn();
             }
@@ -203,6 +211,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (hasWon()) {
                     tv1.setText(turn + " Won! Tap anywhere to replay!");
+                    startOver();
                 }
                 currentTurn();
             }
@@ -257,6 +266,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void startOver() {
-
+        final Button start = findViewById(R.id.start);
+        start.setEnabled(true);
+        start.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                start.setEnabled(false);
+                recreate();
+            }
+        });
     }
 }
